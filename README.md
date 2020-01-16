@@ -13,7 +13,7 @@
 
 ### Association
 - has_many :messages
-- has_many :groups,through::users-groups
+- has_many :groups,through::groups_users
 
 
 
@@ -27,7 +27,7 @@
 
 ### Association
 - has_many :messages
-- has_many :users,through::users-groups
+- has_many :users,through::groups_users
 
 
 
@@ -39,8 +39,8 @@
 |body|text|null: false|
 |image|string||
 |date|daytime||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|foreign_key: true|
+|group_id|integer|foreign_key: true|
 
 
 ### Association
@@ -49,7 +49,7 @@
 
 
 
-## users_groupsテーブル
+## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
