@@ -1,0 +1,30 @@
+.chat-main
+  .group-info
+    %ul.group-info__name
+      チャットグループ
+      %li.group-info__name__member
+        Member : aa
+    %p.group-info__edit
+      = link_to "#" , class: "edit" do
+        Edit
+
+
+  .message-list
+    .message-list__box
+      .message-list__box__top
+        %p.name
+          ひろし
+        %p.date
+          2020/01/27(Fri) 17:17:30
+      .message-list__box__bottom
+        メッセージ
+
+
+  .message-form
+    %form.new_message
+      .input-box
+        %input{type: "text",class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "sabmit", name:"commit", value:"Send", class: "submit-btn"}
