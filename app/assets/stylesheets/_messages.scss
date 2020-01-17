@@ -16,11 +16,9 @@
     display: flex;
     align-items: center;
     &__box{
-      // background-color: #ffffff;
       height: 20px;
       width: 260px;
       margin: 0 auto;
-      // line-height: 100px;
       display: flex;
       justify-content: space-between;
       &__name{
@@ -106,7 +104,6 @@
       margin-bottom: 46px;
       &__top{
         display: flex;
-        // justify-content: space-between;
         .name{
           color: #333333;
           font-size: 16px;
