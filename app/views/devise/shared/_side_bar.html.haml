@@ -5,14 +5,17 @@
         = current_user.name
       %ul.side-header__box__icon
         %li.side-header__box__icon__1
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.side-header__box__icon__2
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
   .groups
     .groups__box
+    - current_user.groups.each do |group|
       %p.groups__box__name
-        チャットグループ
+        = link_to '#' do
+          .group__name
+            = group.name
       %p.groups__box__message
         まだメッセージはありません。
