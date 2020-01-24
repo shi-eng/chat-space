@@ -42,8 +42,6 @@
 $('#new_message').on('submit', function(e){
     e.preventDefault();
 
-    // $('.form__submit').remove('disabled');
-
     var formData = new FormData(this);
     var url = $(this).attr('action');
 
